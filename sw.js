@@ -36,7 +36,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "e34082653a7ee221d11532255d283df6"
+    "revision": "4c5e66994ef827ef758650277f0d97e3"
   },
   {
     "url": "styles.3ca4af51c773b089fab0.css"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "26fddabe57933113828feddab9e4cd99"
+    "revision": "0c30a00c0dc4f913161f822715162112"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
