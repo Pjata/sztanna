@@ -10,7 +10,9 @@ import Bemutatkozas from '../components/Bemutatkozas'
 import Szobak from '../components/Szobak'
 import Szolgaltatasok from '../components/Szolgaltatasok'
 import Foglalas from '../components/Foglalas'
-
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "../assets/css/customCarousel.css"
+import Velemenyek from "../components/Velemenyek"
 class Index extends React.Component {
   constructor(props) {
     super(props);
@@ -46,6 +48,7 @@ class Index extends React.Component {
           <Bemutatkozas/>
           <Szobak/>
           <Szolgaltatasok/>
+          <Velemenyek/>
           <Foglalas/>
 
 

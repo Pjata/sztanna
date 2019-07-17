@@ -1,31 +1,44 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import reggeliImage from "../assets/images/reggeli.jpeg"
 const Szolgaltatasok = (props) => {
  return <section id="second" className="main special">
     <header className="major">
-      <h2>Szolgaltatasok</h2>
-      <p>Vendegunk mindenben reszt vehet amit akar, kocsma latogatas, bicikli, kajak, fozocskezes</p>
+      <h2>Szolgáltatások</h2>
+      <div className={"szoba content"}>
+        <h3>Reggeli</h3>
+        <p>Finom reggeli 1500 HUF / fő / éj áron kérhető</p>
+      <span style={{
+        width:"100%"
+      }} className="image"><img style={{
+        width: "100%"
+      }} src={reggeliImage} alt=""/></span>
+
+      </div>
     </header>
     <ul className="statistics">
       <li className="style3">
         <span className="icon fa-wifi"></span>
         <strong>Wi-Fi</strong>
+        <p>Ingyenes Wi-Fi szolgáltatás</p>
       </li>
       <li className="style4">
         <span className="icon fa-bicycle"></span>
-        <strong>Bicikli berles</strong>
+        <strong>Bicikli bérlés</strong>
+        <p>Kerékpár kölcsönzés 1500 HUF / fő / nap áron</p>
       </li>
       <li className="style5">
         <span className="icon fa-ship"></span>
-        <strong>Hajokazas, kajak berles</strong> Tempus
+        <strong>Túra kenu és kajak bérlés</strong>
+        <p>Lehetőség van túra kenu és kajak bérlésre</p>
+      </li>
+      <li className="style2">
+        <i className="fas fa-swimming-pool fa-2x"></i>
+        <strong>Aquasziget kedvezmény</strong>
+        <p>20 % kedvezményt nyújtó kupon az esztergomi Aquaszigetre
+        </p>
       </li>
     </ul>
-    <p className="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit
-      vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius
-      lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus
-      semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et
-      accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent
-      eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
   </section>
 }
 export default Szolgaltatasok

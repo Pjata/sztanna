@@ -1,0 +1,7 @@
+import img0 from "./0.jpeg"
+import img1 from "./1.jpeg"
+
+export default [
+  img0,
+  img1,
+]

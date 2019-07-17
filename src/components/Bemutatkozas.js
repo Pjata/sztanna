@@ -6,10 +6,9 @@ const Bemutatkozas = (props) => {
     <div className="spotlight">
       <div className="content">
         <header className="major">
-          <h2>Rovid bemutatkozas, reklam szoveg</h2>
+          <h2>Családias környezet, meghitt hangulat</h2>
         </header>
-        <p>Ide lehet majd irni kicsit hosszabb szoveget ahol bemutatod milyen jo kis panzio ez mellette rakunk jo kepet stb
-          ez kb 4-5 mondat kellene hogy legyen.valahogy igy mint ez. most mar mire ezt olvasod nagyjabol el is erted az idealis meretet.
+        <p>Panziónk családi vállalkozásként 2003.-ban nyitotta meg kapuit. 2019.-ben felfrissülve, a mai kor igényeinek megfelelve 6 db két férőhelyes szobával , egy négy fős család számára kényelmes apartmannal és egy különálló szintén négy férőhelyes apartmanházzal várjuk vendégeinket.
         </p>
       </div>
       <span className="image"><img src={pic01} alt=""/></span>
