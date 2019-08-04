@@ -1,6 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import reggeliImage from "../assets/images/reggeli.jpeg"
+import ImageCarousel from "./ImageCarousel"
+import reggeliImage0 from "../assets/images/reggeli.jpeg"
+import reggeliImage1 from "../assets/images/reggeli/pic0.jpg"
+import reggeliImage2 from "../assets/images/reggeli/pic1.jpg"
+const reggeliImages = [
+  reggeliImage2,
+  reggeliImage0,reggeliImage1]
 const Szolgaltatasok = (props) => {
  return <section id="second" className="main special">
     <header className="major">
@@ -10,10 +16,10 @@ const Szolgaltatasok = (props) => {
         <p>Finom reggeli 1500 HUF / fő / éj áron kérhető</p>
       <span style={{
         width:"100%"
-      }} className="image"><img style={{
-        width: "100%"
-      }} src={reggeliImage} alt=""/></span>
+      }} >
+        <ImageCarousel images={reggeliImages}/>
 
+      </span>
       </div>
     </header>
     <ul className="statistics">

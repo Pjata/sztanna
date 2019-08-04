@@ -33,49 +33,39 @@ const Szobak = (props) => {
       <li>
         <ImageCarousel images={apartmanPhotos}/>
         <h3>Különálló apartmanház</h3>
-        <p>A különálló apartmanházunk mindenben kielégíti igényeit. Konyha, mosogató, kád és zuhany várja lakóit</p>
+        <p>A különálló apartmanházunk mindenben kielégíti igényeit. Konyha, mosogatógép, kád és zuhany várja lakóit</p>
       </li>
       <li>
         <ImageCarousel images={macSzoba}/>
-        <h3>Arany-kék szoba</h3>
-        <p>Teljesen felújjított, aranykék</p>
+        <h3>Arany-kék</h3>
       </li>
       <li>
         <ImageCarousel images={pinkSzoba}/>
-        <h3>Pink bútor</h3>
-        <p>mindegyikrol lehet majd lapozni gyorsan a kepeket</p>
+        <h3>Menta</h3>
       </li>
       <li>
         <ImageCarousel images={magentaSzoba}/>
-        <h3>Magenta</h3>
-        <p>mindegyikrol lehet majd lapozni gyorsan a kepeket</p>
+        <h3>Pink</h3>
       </li>
       <li>
         <ImageCarousel images={rainForestSzoba}/>
         <h3>Esőerdő</h3>
-        <p>mindegyikrol lehet majd lapozni gyorsan a kepeket</p>
       </li>
       <li>
         <ImageCarousel images={roseSzoba}/>
         <h3>Rózsa</h3>
-        <p>mindegyikrol lehet majd lapozni gyorsan a kepeket</p>
       </li>
       <li>
         <ImageCarousel images={apartmanFent}/>
-        <h3>Apartman fent</h3>
-        <p>fenti apartman</p>
+        <h3>Apartman</h3>
+        <p>A apartmanunk mindenben kielégíti igényeit. Konyha, mosogatógép, kád és zuhany várja lakóit</p>
       </li>
       <li>
         <ImageCarousel images={foldszintSzoba}/>
         <h3>Foldszinti szoba</h3>
-        <p>foldszinti szoba</p>
+        <p>Akadálymentesített</p>
       </li>
     </ul>
-    <footer className="major">
-      <ul className="actions">
-        <li><Link to="/generic" className="button">Learn More</Link></li>
-      </ul>
-    </footer>
   </section>
 }
 export default Szobak

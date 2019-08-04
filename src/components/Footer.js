@@ -6,21 +6,17 @@ import logo from '../assets/images/logo.svg';
 const Footer = (props) => (
     <footer id="footer">
         <section>
-            <h2>Etiam feugiat</h2>
+            <h2>Elérhetőségek</h2>
             <dl className="alt">
-                <dt>Address</dt>
-                <dd>Esztergom, Erzsebet kiralyne ut 2</dd>
-                <dt>Phone</dt>
-                <dd>(06) 000-0000 x 0000</dd>
+                <dt>Cím</dt>
+                <dd>Esztergom, Erzsébet kiralyné út 2</dd>
+                <dt>Telefonszám</dt>
+                <dd>(06) 20 3914 407</dd>
                 <dt>Email</dt>
-                <dd><a href="#">information@untitled.tld</a></dd>
+                <dd><a href="#">szentannapanzio@gmail.com</a></dd>
             </dl>
             <ul className="icons">
-                <li><a href="#" className="icon fa-twitter alt"><span className="label">Twitter</span></a></li>
-                <li><a href="#" className="icon fa-facebook alt"><span className="label">Facebook</span></a></li>
-                <li><a href="#" className="icon fa-instagram alt"><span className="label">Instagram</span></a></li>
-                <li><a href="#" className="icon fa-github alt"><span className="label">GitHub</span></a></li>
-                <li><a href="#" className="icon fa-dribbble alt"><span className="label">Dribbble</span></a></li>
+                <li><a href="https://www.facebook.com/Szent-Anna-Vend%C3%A9gh%C3%A1z-Panzi%C3%B3-Sz%C3%A1ll%C3%A1s-Esztergom-396067390527467/" className="icon fa-facebook alt"><span className="label">Facebook</span></a></li>
             </ul>
         </section>
     </footer>
