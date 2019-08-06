@@ -1,13 +1,25 @@
+const languages = require('./src/data/languages')
+
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter - Stellar by HTML5 UP",
-    author: "Hunter Chang",
-    description: "A Gatsby.js Starter based on Stellar by HTML5 UP"
+    title: 'Gatsby Starter - Stellar by HTML5 UP',
+    author: 'Hunter Chang',
+    description: 'A Gatsby.js Starter based on Stellar by HTML5 UP',
+    languages,
   },
-  pathPrefix: "/sztanna",
 
+  pathPrefix: '/',
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyForNull: 'any',
+        langKeyDefault: 'hu',
+        useLangKeyLayout: true,
+        prefixDefault: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -21,6 +33,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
   ],
 }

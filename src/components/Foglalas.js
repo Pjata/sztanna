@@ -1,15 +1,23 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
+import { FormattedMessage } from 'react-intl'
 const Foglalas = props => {
+  const { langKey } = props
   const [elfogadva, setElfogadva] = useState(false)
   return (
     <section id="foglalas" className="main special">
       <header className="major">
-        <h2>Szoba foglalás</h2>
-        <p>Ne késlekedjen, foglaljon most szobát!</p>
+        <h2>
+          <FormattedMessage id={'foglTitle'} />
+        </h2>
         <p>
-          A foglaláshoz szükséges elfogadni a{' '}
-          <a href="/hazirend">házirendet ami de kattintva elérhető</a>.
+          <FormattedMessage id={'foglSubtitle'} />
+        </p>
+        <p>
+          <FormattedMessage id={'foglHaziString'} />
+          <Link to={`${langKey}/hazirend`}>
+            <FormattedMessage id={'foglHaziLink'} />
+          </Link>
         </p>
         <input
           type="checkbox"
@@ -18,7 +26,7 @@ const Foglalas = props => {
             setElfogadva(Boolean(checked.target.checked))
           }}
         />
-        Elfogadom a házirendet
+        <FormattedMessage id={'foglAccept'} />
       </header>
       {elfogadva && (
         <footer className="major">
@@ -29,7 +37,7 @@ const Foglalas = props => {
                 href="https://nethotelbooking.net/hotels/szentannapanzioesztergom"
                 className="button special"
               >
-                Foglalok!
+                <FormattedMessage id={'foglButton'} />
               </a>
             </li>
           </ul>

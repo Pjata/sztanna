@@ -8,7 +8,7 @@ import pic04 from '../assets/images/pic04.jpg'
 class Generic extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout location={this.props.location}>
         <Helmet title="Házirend" />
         <div id="main">
           <section id="content" className="main">

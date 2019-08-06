@@ -13,6 +13,14 @@ import Foglalas from '../components/Foglalas'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import '../assets/css/customCarousel.css'
 import Velemenyek from '../components/Velemenyek'
+import { addLocaleData } from 'react-intl'
+import en from 'react-intl/locale-data/en'
+import 'intl/locale-data/jsonp/en'
+import messages from '../data/messages/en'
+import { FormattedMessage } from 'react-intl'
+
+addLocaleData(en)
+
 class Index extends React.Component {
   constructor(props) {
     super(props)
@@ -31,24 +39,28 @@ class Index extends React.Component {
 
   render() {
     return (
-      <Layout>
-        <Helmet title="Szent Anna Panzio" />
+      <Layout location={this.props.location} i18nMessages={messages}>
+        {langsMenu => (
+          <>
+            <Helmet title={'Szent Anna Pension and Apartman'} />
 
-        <Header />
+            <Header langsMenu={langsMenu} />
 
-        <Waypoint
-          onEnter={this._handleWaypointEnter}
-          onLeave={this._handleWaypointLeave}
-        />
-        <Nav sticky={this.state.stickyNav} />
+            <Waypoint
+              onEnter={this._handleWaypointEnter}
+              onLeave={this._handleWaypointLeave}
+            />
+            <Nav sticky={this.state.stickyNav} />
 
-        <div id="main">
-          <Bemutatkozas />
-          <Szobak />
-          <Szolgaltatasok />
-          <Velemenyek />
-          <Foglalas />
-        </div>
+            <div id="main">
+              <Bemutatkozas />
+              <Szobak />
+              <Szolgaltatasok />
+              <Velemenyek />
+              <Foglalas langKey={'/en'} />
+            </div>
+          </>
+        )}
       </Layout>
     )
   }
