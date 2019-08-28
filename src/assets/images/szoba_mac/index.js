@@ -15,7 +15,7 @@ const useImages = () => {
               name
               childImageSharp {
                 fixed(width: 300) {
-                  ...GatsbyImageSharpFixed
+                  ...GatsbyImageSharpFixed_withWebp
                 }
               }
             }

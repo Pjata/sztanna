@@ -6,11 +6,17 @@
 
 /* Header */
 
+.headerBg {
+	width: 100%;
+	background-position: top;
+	background-repeat: repeat-y;
+	background-size: cover;
+
+}
 	#header {
-		@include vendor('background-image',(
-		'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
-        'url("../images/kert.png")',
-		));
+	//	@include vendor('background-image',(
+    //    'url("../images/kert.png")',
+	//	));
 		@include padding(5em, 5em, (0, 0, -2em, 0));
 		text-align: center;
 

@@ -1,8 +1,21 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import pic01 from '../assets/images/door.png'
 import { FormattedMessage } from 'react-intl'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 const Bemutatkozas = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "door.png" }) {
+        name
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+  `)
   return (
     <section id="intro" className="main">
       <div className="spotlight">
@@ -17,7 +30,7 @@ const Bemutatkozas = props => {
           </p>
         </div>
         <span className="image">
-          <img src={pic01} alt="" />
+          <Img fixed={data.file.childImageSharp.fixed} alt="" />
         </span>
       </div>
     </section>
