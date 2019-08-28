@@ -26,34 +26,33 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-bdc257b4fb8e0d3b5f5d.js"
+    "url": "webpack-runtime-c4dc51e89f375ac31714.js"
   },
   {
-    "url": "app-ac2084e492322032cd0a.js"
+    "url": "app-64d92c10c7c4157627c4.js"
   },
   {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-b57774ac704820e4eeb7.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-f06792c51efe4435ef44.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "a9f254ffe2a721de26797e16611f80db"
+    "revision": "593b2e1f9d79ad8ab90d0367dae789e7"
   },
   {
-    "url": "styles.b0b517e3d6474af6bdfc.css"
+    "url": "styles.6ea0c5f5b1a7b0aa84d8.css"
   },
   {
-    "url": "styles-fc023390f7d1035dc148.js"
+    "url": "1-aa5aa227276b02244618.js"
   },
   {
-    "url": "component---src-pages-404-js-2d2bc8dc53a237d5c4a7.js"
+    "url": "component---src-pages-404-js-8ae662c5acaa5ad1b8bc.js"
+  },
+  {
+    "url": "styles-c99aeb04ecb8fe1b8a2e.js"
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "65b0ad7ab9f3ad98f2dc158469e9e731"
-  },
-  {
-    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "386f2e5d1e26beeca60934856eb23e6a"
+    "revision": "3a19d691765302521f5212fc47fc094b"
   },
   {
     "url": "manifest.webmanifest",
@@ -79,7 +78,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/sztanna/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -151,7 +150,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `/sztanna${pathname}`
+        return `${pathname}`
       } else {
         return pathname
       }
