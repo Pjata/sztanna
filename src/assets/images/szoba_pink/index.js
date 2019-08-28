@@ -1,9 +1,30 @@
-import img0 from "./0.jpeg"
-import img1 from "./1.jpeg"
-import img2 from "./2.jpeg"
+import { useStaticQuery, Link, graphql } from 'gatsby'
+const useImages = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allFile(
+          filter: {
+            dir: { glob: "**/szoba_pink" }
+            extension: { ne: "js" }
+            name: { regex: "/^(?!X_).*/" }
+          }
+        ) {
+          edges {
+            node {
+              name
+              childImageSharp {
+                fixed(width: 300) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+  return data.allFile.edges.map(({ node }) => node)
+}
 
-export default [
-  img0,
-  img1,
-  img2,
-]
+export default useImages

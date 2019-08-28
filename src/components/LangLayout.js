@@ -27,7 +27,7 @@ const Layout = ({ children, location, i18nMessages }) => {
         }
       `}
       render={data => {
-        const url = location.pathname
+        const url = location ? location.pathname : ''
         const { langs, defaultLangKey } = data.site.siteMetadata.languages
         const langKey = getCurrentLangKey(langs, defaultLangKey, url)
         console.log(langKey)
@@ -58,6 +58,7 @@ const Layout = ({ children, location, i18nMessages }) => {
 
 Layout.propTypes = {
   children: PropTypes.func,
+  location: {},
 }
 
 export default Layout

@@ -10,6 +10,15 @@ module.exports = {
 
   pathPrefix: '/',
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images/`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-i18n',
